@@ -8,11 +8,16 @@ on:
         default: false
 
 run-name: "My custom workflow run name | debug - ${{ github.event.inputs.debug }}"
-
+env:
+  MY_WORKFLOW_VAR: "workflow"
+  MY_OVERWRITTEN_VAR: "workflow"
 jobs:
 
   echo-data:
     runs-on: ubuntu-latest
+    env:
+      MY_JOB_VAR: "job"
+      MY_OVERWRITTEN_VAR: "job"
     steps:
       - name: Display information
         run: |
@@ -27,4 +32,5 @@ jobs:
       - name: Retrieve Variable
         run: |
           echo "The value of MY_VARIABLE is: ${{ vars.MY_VAR }}"
+      - name: 
      
