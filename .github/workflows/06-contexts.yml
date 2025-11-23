@@ -2,8 +2,7 @@ name: 06-contexts
 on:
   workflow_dispatch:
 
-# env:
-#   MY_VARIABLE: ${{ vars.MY_VAR }}
+run-name: "My custom workflow run name - ${{ runner.os }}"
 
 jobs:
 
