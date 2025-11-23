@@ -16,6 +16,7 @@ jobs:
         if: ${{ github.event.inputs.debug }}
         run: |
           echo "Debug mode is enabled"
+          echo "inputs.debug - 1 : ${{ github.event.inputs.debug }}"
           echo "Event name: ${{ github.event_name }}"
           echo "Workflow name: ${{ github.workflow }}"
           echo "Actor: ${{ github.actor }}"
@@ -25,6 +26,9 @@ jobs:
           echo "Run number: ${{ github.run_number }}"
       - name: "[debug] Print when triggered"
         if: ${{ github.event.inputs.debug && github.ref == 'refs/heads/main'}}"
-        run: echo "I was triggered from main"
+        run: |
+          echo "inputs.debug - 1 : ${{ github.event.inputs.debug }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "I was triggered from main"
       - name: "Greeting"
         run: echo "Hello, ${{ github.actor }}! Welcome to the world of GitHub Actions."
