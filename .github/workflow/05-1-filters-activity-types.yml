@@ -1,13 +1,11 @@
 name: 5 - 1 - Event Filters and Activity Types
 on:
-  # push:
-  #   branches: [main]
   pull_request: 
     types:
-    - opened
-    - synchronize
+      - opened
+      - synchronize
   branches: 
-    - main
+      - main
 
 jobs:
   echo:
