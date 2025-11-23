@@ -19,7 +19,7 @@ jobs:
           echo "The ref is: ${{ github.ref }}"
           echo "The sha is: ${{ github.sha }}"
           echo "The run number is: ${{ github.run_number }}"
-          
+
       - name: Retrieve Variable
         run: echo "The value of MY_VARIABLE is: ${{ env.MY_VARIABLE }}"
      
