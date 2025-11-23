@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "[debug] Print start-up data"
-        if: ${{ github.event.inputs.debug }}
+        if: ${{ inputs.debug }}
         run: |
           echo "Debug mode is enabled"
           echo "inputs.debug - 1 : ${{ github.event.inputs.debug }}"
@@ -25,9 +25,9 @@ jobs:
           echo "SHA: ${{ github.sha }}"
           echo "Run number: ${{ github.run_number }}"
       - name: "[debug] Print when triggered"
-        if: ${{ github.event.inputs.debug == true && github.ref == 'refs/heads/main'}}"
+        if: ${{ inputs.debug == true && github.ref == 'refs/heads/main'}}"
         run: |
-          echo "inputs.debug - 1 : ${{ github.event.inputs.debug }}"
+          echo "inputs.debug - 1 : ${{ inputs.debug }}"
           echo "Ref: ${{ github.ref }}"
           echo "I was triggered from main"
       - name: "Greeting"
