@@ -24,7 +24,7 @@ jobs:
           echo "SHA: ${{ github.sha }}"
           echo "Run number: ${{ github.run_number }}"
       - name: "[debug] Print when triggered"
-        if: ${{ github.event.inputs.debug && github.ref == 'ref/heads/main'}}"
+        if: ${{ github.event.inputs.debug && github.ref == 'refs/heads/main'}}"
         run: echo "I was triggered from main"
       - name: "Greeting"
         run: echo "Hello, ${{ github.actor }}! Welcome to the world of GitHub Actions."
