@@ -30,7 +30,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           echo "The PR labels are:"
-          for label in "${{ toJson(github.event.pull_request.labels) }}"; do
+          for label in "${{ toJson(github.event.pull_request.labels)  }}"; do
             echo "$label"
           done
       
