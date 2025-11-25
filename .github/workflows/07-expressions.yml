@@ -7,7 +7,7 @@ on:
         description: 'Enable debug mode'
         type: boolean
         default: false
-
+run-name: "My custom workflow run name | debug - ${{ inputs.debug &&}} 'ON' if the debug input is true else 'OFF' >"
 jobs:
   echo:
     runs-on: ubuntu-latest
